@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+}
+
+#container{
+    width: 400px;
+    height: 400px;
+    border: 10px solid darkblue;
+/* W momencie, gdy obiekt wewnatrz kontenera wychodzi poza jego ramy (efekt przepelnienia) - overflow:hidden na kontenerze   */
+    overflow: hidden;
+    
+    margin-bottom: 30px;
+}
+
+#container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    transition: all 1s;
+}
+
+#container:hover img{
+    transform: scale(1.4);
+}
+
+
+
+/* Background */
+#bg{
+    height: 100%;
+    
+    background-image: url("https://cdn.pixabay.com/photo/2016/01/08/16/53/flame-1128636_960_720.jpg");
+    background-position: center;
+    background-size: cover; 
+    
+    transition: all 1s;
+}
+
+#container:hover #bg{
+    transform: scale(1.4);
+}

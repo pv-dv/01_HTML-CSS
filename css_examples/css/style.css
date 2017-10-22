@@ -1,0 +1,78 @@
+/* Markup selector */
+h1 {
+    background-color: chartreuse
+}
+
+h1 {
+    background-color: cadetblue
+}
+
+
+/* ID selector */
+#paragraph {
+    background-color: azure;
+    color:cornflowerblue;
+
+}
+
+
+/* Class selector */
+.menu-item {
+    font-size: 3em;
+}
+
+
+/* Selectory relacyjne */
+/* Selektor potomstwa bezposredniego */
+div > span {
+    color: darkred
+}
+
+
+/* Selector potomstwa niebezposredniego */
+section span {
+    background-color: yellowgreen
+}
+
+
+/* Selector bezposredniego rodzenstwa */
+h2 + p{
+    background-color: burlywood;
+    font-size: 1.5em;
+}
+
+
+/* Selector rodzenstwa */
+h3 ~ p {
+    background-color: chocolate     
+}
+
+
+
+
+/* Cwiczenie */
+/* Kolejnosc:
+1. ID
+2. klasa
+3. znacznik
+Z. !important nadpisuje wszystkie inne reguly
+*/
+#main-header{
+    background-color: firebrick;
+}
+
+
+.header {
+    background-color: seagreen
+}
+
+h2 {
+    background-color: aqua
+}
+
+/* Nadpisanie wszystkich innych stylow */
+h2{
+    background-color: black !important;
+    color: darkgoldenrod !important;
+}
+

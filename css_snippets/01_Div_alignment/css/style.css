@@ -1,0 +1,51 @@
+/* DIV ALIGNMENT */
+/* https://codepen.io/meodai/pen/XbEqZw?editors=1100 */
+
+.outer {
+    background-color: #0d2f57;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.inner {
+    background-color: #909090;
+    height: 35%;
+    width: 35%;
+}
+
+
+/* First way - positions */
+#sq-outer-1 {
+    position: relative;
+}
+
+#sq-inner-1 {
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+
+/* Second way - flex positioning */
+#sq-outer-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Third way - table cell */
+#sq-outer-3 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#sq-inner-3{
+      display: inline-block;
+}

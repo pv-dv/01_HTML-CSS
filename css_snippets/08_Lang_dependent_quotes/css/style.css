@@ -1,0 +1,24 @@
+.container{
+    height: 50px;
+    background-color: #a7a7a7;
+    margin-bottom: 20px;
+}
+
+q[lang="en"]::before, quoteblock[lang="en"]::before {
+    content: "*";
+}
+q[lang="en"]::after, quoteblock[lang="en"]::after {
+    content: "*";
+}
+
+
+q:not([lang="en"])::before, quoteblock:not([lang="en"])::before {
+    content: open-quote;
+}
+q:not([lang="en"])::after, quoteblock:not([lang="en"])::after {
+    content: close-quote;
+}
+
+
+
+

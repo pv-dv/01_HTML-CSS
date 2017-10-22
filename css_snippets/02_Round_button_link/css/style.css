@@ -1,0 +1,26 @@
+#container{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: darkred;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 3em;
+}
+
+#container>a{
+    line-height: 70px;
+}
+
+.fa{
+    color: black;
+}
+
+#container:hover{
+    background-color: black;
+    border: 2px solid darkred; 
+}
+
+#container:hover .fa{
+    color: darkred;
+}
