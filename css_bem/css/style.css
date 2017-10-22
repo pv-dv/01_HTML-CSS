@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+
+.header {
+    color: cadetblue;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.header--main {
+    background-color: crimson;
+    color: #fff;
+}
+
+.header__title--paragraph {
+    color: slategray;
+    text-decoration: underline;
+    font-weight: bolder;
+}

@@ -1,0 +1,40 @@
+/*Globals for squares*/
+.square {
+    width: 150px;
+    height: 150px;
+    margin: 15px auto;
+    transition-property: width, height;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+
+/*RED*/
+.red {
+    background-color: red;
+}
+
+.red:hover {
+    width: 300px;
+}
+
+
+/*GREEN*/
+.green {
+    background-color: green;
+}
+
+.green:hover {
+    width: 300px;
+    height: 300px;
+}
+
+
+/*BLUE*/
+.blue {
+    background-color: blue;
+}
+
+.blue:hover {
+    height: 300px;
+}

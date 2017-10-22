@@ -1,0 +1,21 @@
+@media print{
+    #universal #main-list-1 .list-item{
+        background-color: black;
+        color: darkviolet;
+    }
+}
+
+@media all and (orientation: landscape){
+        #universal #main-list-1 .list-item{
+        background-color: black;
+        color: darkviolet;
+    }
+}
+
+@media all and (max-width:800px){
+    #universal{
+        background-color: blue;
+    }
+}
+
+

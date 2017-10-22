@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+<!--   action = sciezka do back-endu 
+       method = metoda get/post-->
+    <form action="https://formspree.io/pavv.dev@gmail.com" method="POST">
+<!--       Input tekstowy -->
+        <label for="name-surname">Imię i nazwisko</label>
+        <input type="text" id="name-surname" name="name">
+        <br>
+        
+<!--        Input numeryczy -->
+        <label>Wiek<input type="number" name="age"></label><br>
+        
+<!--        Jednokrotny wybor -->
+       <input type="radio" name="radio" id="opcja1"><label for="opcja1">Opcja 1</label>
+       <input type="radio" name="radio" id="opcja2"><label for="opcja2">Opcja 2</label>
+       <br>
+       
+       
+       
+       
+       
+<!--       Lista rozwijana-->
+      <select name="Lista-rozwijana" id="">
+          <option value="Opcja1">Opcja 1</option>
+          <option value="Opcja2">Opcja 2</option>
+          <option value="Opcja3">Opcja 3</option>
+      </select><br>
+      
+<!--      Pole tekstowe -->
+      <textarea name="text_box" id="" cols="30" rows="10"></textarea>
+      <br>
+       
+<!--       Send -->
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>

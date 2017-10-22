@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form - extended CSS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <form action="https://formspree.io/pavv.dev@gmail.com" method="POST">
+            <!-- name-->
+            <label for="name">Imię</label> <br>
+            <input type="text" id="name" name="name" class="input"> <br>
+
+            <!-- surname-->
+            <label for="surname">Nazwisko</label> <br>
+            <input type="text" id="surname" name="surname" class="input"> <br>
+
+            <!-- mail -->
+            <label for="mail">Email</label><br>
+            <input type="text" id="mail" name="mail" class="input"> <br>
+            
+            <!-- phone -->
+            <label for="phone">Numer telefonu</label><br>
+            <input type="tel" id="phone" name="phone" class="input"> <br>
+            
+            <!-- town -->
+            <label for="town">Miasto</label><br>
+            <select id="town" name="town" >
+          <option value="Gdańsk">Gdańsk</option>
+          <option value="Kraków">Kraków</option>
+          <option value="Warszawa">Warszawa</option>
+        </select> <br>
+
+           
+           <!-- Radio -->
+            <label for="gender">Płeć</label><br>
+            <input type="radio" name="gender" id="male" value="Mężczyzna"><label for="male">Mężczyzna</label><br>
+            
+            <input type="radio" name="gender" id="female" value="Kobieta"><label for="female">Kobieta</label> <br>
+
+            <!-- Text box -->
+            <label for="txtbox" class="msg-label">Wiadomość</label> <br>
+            <textarea name="text_box" id="txtbox" cols="40" rows="5"></textarea> <br>
+            
+            <!-- consent -->
+            <input type="checkbox" id="consent" name="consent"><label for="consent">Zgoda na przetwarzanie danych osobowych</label> <br>
+            
+            <!-- Send -->
+            <input type="submit" value="Wyślij">
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+/*Standard selectors*/
+/* Universal selector - asterisk */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ID selector */
+#universal {
+    background-color: #3f465f;
+    /*    height: 50px;*/
+}
+
+
+/* Element selector */
+ul {
+    list-style: none;
+    /* removes the list dots */
+}
+
+li {
+    color: #989898;
+}
+
+
+/*Class selector*/
+.list-item {
+    color: #b99f14;
+}
+
+
+
+/*--------------------*/
+/*Relation selectors*/
+/*Child selecor*/
+/*all elemnts within a parrent tag, no matter the level */
+#child p {
+    font-size: 28px;
+    color: #313131;
+}
+
+
+/*Direct child selector - all elements direcly inside the parrent tag*/
+
+#child>p {
+    color: darkred
+}
+/*For child selector and direct selector have the same strength - cascading rules apply (whichever is the last one applies)*/
+
+
+/*Sibling selector*/
+/*different element types on the same level*/
+#child p+span {
+    color: #a37f1c;
+}
+
+#child p+span p {
+    color: #157c15;
+}
+/*For each sibling of p withing #child ID (=span), apply color to its child element (=p)*/
+
+
+
+/*--------------------*/
+/*Pseudo-elements*/
+/*Do not exist in the document tree, but can be created in CSS*/
+
+/*Before & after*/
+/*Cannot use these pesude selectors if the element does not have CONTENT tag in it */
+
+#child p+span p::before {
+/*    content: '*';*/ /*commented for first-letter style*/
+    content: 'L';
+}
+
+
+/*Such elements cannot be selected in teh document display (via mouse)*/
+#child p+span p::after {
+    content: '<===';
+}
+/*Before and after tags belong to an element they are in - in this case to the p within span*/
+
+/*practical usage - custom list pointing*/
+/*(default list pointing has been disabled in ul styles)*/
+#universal #main-list-1 .list-item::before {
+    content: '=>';
+    margin-right: 10px;
+}
+
+
+/*First letter*/
+/*Special characters are not considered first letters!*/
+#child p+span p::first-letter {
+color: darkred;
+}
+
+/*First line*/
+#child p+span p::first-line {
+    color: #23b700
+}
+/*First-letter is stronger than first-line*/
+
+
+
+/*--------------------*/
+/* Pseudo-classes */
+/* Links */
+/* Unvisited */
+#linki a:link {
+    color: darkred;
+}
+
+/*Visited*/
+#linki a:visited {
+    color: #0a1462;
+}
+
+/*Hover*/
+#linki a:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*Active*/
+#linki a:active {
+    color: pink;
+    text-decoration: none;
+}
+
+/*Focus*/
+/*Active element -while providing text*/
+#focus input {
+    margin-top: 30px;
+}
+
+#focus input:focus {
+    border: 3px solid red;
+    background-color: #000;
+    color: #fff;
+}
+
+
+/*Target*/
+/*Link needs to be activated?*/
+:target {
+    border: 3px solid black;
+}
+
+
+/*Lang*/
+div:lang(pl) {
+    background-color: #747402;
+}
+
+
+/*First & last-child*/
+#main-list-1 .list-item:first-child {
+    color: chartreuse;
+    background-color: #000;
+}
+
+#main-list-1 .list-item:last-child {
+    color: #ffeb00;
+    background-color: #000;
+}
+
+
+/*
+safari requires:
+#main-list .list-item:first-child,
+#main-list .list-item:first-of-type {
+    color: chartreuse
+}
+The same for last-child, list-of-type*/
+
+
+
+/*Only child*/
+/* Target = elements that are the only one child*/
+#only-child span:only-child {
+    background-color: #aa0000;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+
+
+/*
+Empty
+div:empty {
+    width: 300px;
+    height: 150px;
+    background-color: #2c2c2c;
+}
+*/
+
+
+
+/*-------------------*/
+/* nth-child()*/
+/* nth-last-child()*/
+#main-list-2 .list-item:nth-child(3){
+    background-color: #fff;
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+#main-list-2 .list-item:nth-child(even){
+    background-color: #9a9a9a;
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+#main-list-2 .list-item:nth-child(odd){
+    background-color: #fff;
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+/*Practical use*/
+#container {
+    background-color: #000;   
+    overflow: hidden;
+}
+
+#container .floated {
+    width: 33%;
+    display: inline-block;
+    margin-right: 0.5%;
+    background-color: #535dd4;
+    float: left;
+    color: #fff;
+}
+
+#container .floated:nth-child(3n + 3) {
+    margin-right: 0;
+}
+
+
+
+/*----------------------*/
+/* Attributes */
+
+#attributes input[type] {
+    width: 99%;
+    margin-bottom: 10px; 
+}
+
+
+#attributes input[type="tel"] {
+background-color: aqua;
+}
+
+/*Attribute that contain the value in it*/
+#attributes input[title~="input"] {
+    background-color: #960707;
+}
+
+/*Attribute with at least one occurence of value*/
+#attributes input[title*="3"] {
+    background-color: #3b0000;
+}
+
+/*Attribute with value starting with (^) or ending (4) with string*/
+#attributes input[title^="inp"] {
+    background-color: #137601;
+}
+
+#attributes input[title$="ast"] {
+    background-color: #011376;
+}
+
+
+
+
+
+/*------------------*/
+/*PART 2*/
+
+#element-centering {
+    height: 100px;
+    background-color: #000;
+    text-align: center;
+}
+/*text-align mozna wymusic na elemencie poprzez zmiane jego display - np na inline-block*/
+
+#element-centering div {
+    width: 500px;
+    margin: 10px auto;
+/*  above is the same as 
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:auto;
+    margin-right:auto;*/
+    background-color: #fff;
+}
+
+
+/* Float */
+#floating img{
+    float: left;
+    width: 200px;
+}
+
+.clear{
+    clear: both;
+}
+
+
+/*Transitions*/
+/*smooth transition of css effects*/
+#transition{
+    width: 300px;
+    height: 300px;
+    background-color: #00ad57;
+    
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+
+#transition:hover{
+    background-color: #9b6500;
+    
+}
+
+
+
+
+/*Background property*/
+/* wlasciwosc dwuargumentowa,jezeliu nie podamy drugiej zawsze ustawione jets na center */
+#background {
+    width: 600px;
+    height: 600px;
+    background-image: url('http://dinoanimals.pl/wp-content/uploads/2015/01/Kot_zwislouchy_10-588x563.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    /* do efektów parallax uwywamyt background attachment:fixed */
+/*    background-attachment: fixed;*/
+    /* nia element grafika z zachowaniem proporcji, możliwa strata kilku pixeli */
+    background-size: cover;
+    /* background */
+/*    background: #000;*/
+}
+
+
+
+
+
+/*Overflow - przepelnianie*/
+#overflow{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow: hidden;
+/*    Browser builds a website on a single layer - every block falls           beneth the previous one.In order to stack oe element on another we use floating - browser than iterprets this as a stack of elements one on top of another. This setting is however carried over to further element, what may cause that all next elements will be stacked on top of previous one. To avoid it we use overflow: hidden; or a new div with class .clear
+.clear{
+    clear: both;
+}*/
+}
+
+#overflow p{
+    font-size: 26px;
+    width: 500px; 
+/*    Thanks to width of the paragraph, we can us the X-axis overflow from parrent CSS, as p width is greater than the parrent width*/
+}
+
+
+
+/*Box-sizing*/
+/*tells the browser if an element's paddings and border should count in the element width (max = the one defined) or add up to the defined settings*/
+#box-sizing1{
+    width: 150px;
+    height: 150px;
+    padding: 30px;
+    border: 1px dashed black;
+    display: inline-block;
+}
+/*Content box does not count in the padding and border into max size of the element, resulting in adding these values up to the size defined -> element width 212, element height 212*/
+
+
+#box-sizing2{
+    width: 150px;
+    height: 150px;
+    padding: 30px;
+    border: 1px solid red;
+    display: inline-block;
+    box-sizing:border-box;
+/*    border box causes the padding and border to count in to the size of the content box - element width: 150, height: 150. As defined*/
+}
+
+
+
+
+/*RWD*/
+/*responsive.css*/

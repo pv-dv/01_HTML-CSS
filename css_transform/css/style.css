@@ -1,0 +1,85 @@
+body {
+    text-align: center;
+}
+
+
+img {
+    height: 300px;
+}
+
+.rotate:hover img {
+    /*  zgodnie z ruchem wskazowek zegara  */
+    transform: rotate(45deg);
+    /*  CCW z minusem */
+    /*    transform: rotate(-45deg);*/
+    /*   Lustrzane odbicie */
+    /*    transform: rotateY(180deg);*/
+}
+
+
+/*przesuniece*/
+
+.translate:hover img {
+    transform: translate(100px, 100px);
+    /*  W przypadku procentow, wartosci odnosi sie do           wymiarow obiektu, ktory bedzie przesuwany!*/
+    /*  Zeby wysrodkowac obrazek pionowo i poziomo (poziomo     z body):
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    
+    LUB
+    
+    
+    wycentrowanie diva wzgledem body
+    .translate{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    }
+    
+    wycentrowanie obrazka niepotrzebne, bo obrazek zajmuje 100% kontenera
+    */
+}
+
+
+/*skalowanie*/
+
+.scale:hover img {
+    transform: scale(1.2);
+}
+
+
+/*---------------------*/
+
+
+/* ANIMACJE */
+
+.animation:hover img {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+    @keyframes pulse {
+        /*  Pierwsza klatka  */
+        0% {
+            transform: scale(1) rotate();
+            opacity: 1;
+        }
+        /*  Połowa animacji  */
+        50% {
+            transform: scale(0.7) rotate(180deg);
+            opacity: 0.7;
+        }
+        /*  Koniec animacji  */
+        100% {
+            transform: scale(1) rotate(360deg);
+            opacity: 1;
+        }
+    }

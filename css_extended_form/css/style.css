@@ -1,0 +1,79 @@
+/*Global styles*/
+* {
+    color: #fff;
+}
+
+#container {
+    width: 50%;
+    background-color: #213b50;
+    padding: 20px;
+}
+
+
+#container input,
+#container select,
+#container textarea {
+    border: none;
+    background-color: #2b4a64;
+    margin-bottom: 10px;
+    margin-top:5px;
+}
+
+
+.input, select, textarea {   
+    width: 50%;
+    height: 25px;
+}
+
+
+#container input:focus,
+#container textarea:focus,
+#container select:focus {
+    background-color: #4e708c;
+    outline-color: #fff;
+    outline-width: 2px;    
+}
+
+
+/*Text area*/
+#container textarea {
+    height: auto;
+    margin-bottom: 0;
+    
+}
+
+
+/* Radio buttons */
+#container input[type="radio"]{
+    padding: 5px;
+}
+
+#container input[value="Kobieta"] {
+    margin-bottom: 30px;
+}
+
+
+/* Send */
+#container input[type="submit"]{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 110px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: limegreen;  
+    line-height: 50px;
+}
+
+#container input[type="submit"]:hover{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 110px;
+    color: limegreen; 
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fff;  
+    line-height: 50px;
+}

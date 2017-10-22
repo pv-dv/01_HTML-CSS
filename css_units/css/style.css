@@ -1,0 +1,94 @@
+html {
+    font-size: 20px;
+}
+
+
+#container {
+    font-size: 30px;
+}
+
+
+#container > div {
+    background-color: rgba(0,255,255,0.6);
+    margin-bottom: 15px;
+}
+
+/* Absolute units - always the same size, irrespectively of the 
+   window/container size*/
+#pixele {
+    width: 400px;  
+}
+
+/* Relative units - dependant on other elements, depending on the
+   relative element */
+#em {
+/* Unit dependant on the parrent size.
+   Mostly used with font sizes */
+    width: 20em;
+/* 20 times 30px (taken from #container font size, as container is parrent).
+   MOstly used with fonts - to align child and parrent font sizes */ 
+}
+
+#ex {
+/* SImilar as EM - height of X letter in parrent font */
+    width: 20ex;
+}
+
+#rem {
+/* Heigh of the document (html tag) font size. if <html> font size is not defined
+   - 16px (controlled by browser) * REM */
+    width: 20rem;
+    
+}
+
+
+
+/*-------------*/
+/*Actual relative units*/
+#procenty {
+/* Percentge of parrent sizes (width, height, font-size) */
+    width: 50%;    
+}
+
+/*Viewport units*/
+#vw {
+/*Based on the WIDTH of the browser window
+  !!! Including margins and slidebar !!! */
+    width: 60vw;
+}
+
+#vh {
+/*Based on the HEIGHT of the browser window
+  !!! Including margins and slidebar !!! */
+    width: 60vh; 
+}
+
+#vmin {
+/* Takes the lesser value - if width is lesser than height
+    -> 60% of width, else - 60% of height */
+    width: 60vmin;
+}
+
+
+#vmax{
+/* Takes the greater value - if width is greater than height
+    -> 60% of width, else - 60% of height */
+    width: 60vmax;
+}
+
+/* Below ones - available in CSS, but not used/not recommended! */
+#inch { 
+    width: 4in;
+}
+
+#cm {
+    width: 20cm;
+}
+
+#mm {
+    width: 200mm;
+}
+
+#pt {
+    width: 120pt;
+}

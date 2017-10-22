@@ -1,0 +1,29 @@
+    /* Globals  */ 
+    #gallery {
+        width: 90%;
+    }
+    
+    figure {
+        width: 33%;
+    }
+
+    /* Two columns */    
+    @media (max-width: 992px) {
+        figure {
+            width: 49%;
+        }
+    }
+
+    /* One column */ 
+    @media (max-width: 768px) {
+        figure {
+            width: 99%;
+        }
+    }
+
+    /* One column - 100% of the screen width */
+    @media (max-width: 480px) {
+        #gallery figure {
+            width: 100%;
+        }
+    }
